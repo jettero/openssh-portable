@@ -626,11 +626,11 @@ client_process_net_input(struct ssh *ssh, fd_set *readset)
 			 * Received EOF.  The remote host has closed the
 			 * connection.
 			 */
-			if ((r = sshbuf_putf(stderr_buffer,
-			    "Connection to %.300s closed by remote host.\r\n",
-			    host)) != 0)
-				fatal("%s: buffer error: %s",
-				    __func__, ssh_err(r));
+			/* if ((r = sshbuf_putf(stderr_buffer, */
+			/*     "Connection to %.300s closed by remote host.\r\n", */
+			/*     host)) != 0) */
+			/*     fatal("%s: buffer error: %s", */
+			/*         __func__, ssh_err(r)); */
 			quit_pending = 1;
 			return;
 		}
